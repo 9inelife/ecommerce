@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import { Button} from 'antd';
-import { useMoralis } from "react-moralis";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../Redux/Actions/userActions";
 
-
 const Header = () => {
- 
-  const { authenticate, account } = useMoralis();
+
   const [keyword, setKeyword] = useState();
   const dispatch = useDispatch();
   let history = useHistory();
@@ -37,31 +33,24 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+234 806 9175 722</p>
-              <p>info@Agrichainx.com</p>
+              <p>+255 768 356 890</p>
+              <p>hello@spotternft.com.</p>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="">
-                <i className="fab fa-facebook-f"></i>
+              <Link to="https://discord.com/invite/DqNTWqPeny">
+                <i className="fab fa-discord"></i>
               </Link>
-              <Link to="">
+              <Link to="https://www.instagram.com/spotternft/">
                 <i className="fab fa-instagram"></i>
               </Link>
-              <Link to="">
+              <Link to="http://linkedin.com/in/spotter-nft-3817a222a">
                 <i className="fab fa-linkedin-in"></i>
               </Link>
-              <Link to="">
-                <i className="fab fa-youtube"></i>
+              <Link to="https://twitter.com/Spotter__NFT">
+                <i className="fab fa-twitter"></i>
               </Link>
-           
-              <Button 
-         className="login"
-         key="1" 
-         type="primary" 
-         onClick={() => authenticate()}>
-          {account ? <span>{account.slice(0,5)}...</span> : <span>Connect Wallet</span>}
-          </Button>
-         
+             
+
             </div>
           </div>
         </div>
@@ -75,7 +64,7 @@ const Header = () => {
               <div className="row ">
                 <div className="col-6 d-flex align-items-center">
                   <Link className="navbar-brand" to="/">
-                    <img alt="logo" src="../images/agrichainx.png" />
+                    <img alt="logo" src="/images/logo.png" />
                   </Link>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
@@ -154,7 +143,7 @@ const Header = () => {
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center">
                 <Link className="navbar-brand" to="/">
-                <img alt="logo" src="../images/agrichainx.png" />
+                  <img alt="logo" src="/images/logo.png" />
                 </Link>
               </div>
               <div className="col-md-6 col-8 d-flex align-items-center">
